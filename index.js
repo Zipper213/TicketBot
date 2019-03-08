@@ -1,10 +1,7 @@
 const Discord = require("discord.js");
 const Client = new Discord.Client();
 const prefix = ">";
-const Owner = "ZippyTheDoggy";
-const OwnerDiscord = "ZippyTheDoggy#9276";
-const DiscordLink = "https://discord.gg/Xfqqwtm";
-const BotName = "Ticket Bot";
+const Token = "NTUyOTkwNzU1Mzc1ODA4NTMy.D2Hv_Q.P_V3tETTvqlsS73K55E6s9y-G-E";
 
 Client.on('ready', () => {
 	console.log(`Bot logged on with ${Client.user.tag}`);
@@ -19,10 +16,8 @@ Client.on('message', (message) => {
 
 	if(msgp === "test") {
 		channel.send("Yay It works... I think?")
-	} else if(msgp === "discord" & proccess.env.Discord) {
-		channel.send("https://discord.gg/Xfqqwtm");
 	}
 
 });
 
-Client.login(process.env.BOT_TOKEN);
+Client.login(process.env.BOT_TOKEN || Token);
