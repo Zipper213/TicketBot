@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const Client = new Discord.Client();
 const prefix = ">";
+const Owner = "ZippyTheDoggy";
+const OwnerDiscord = "ZippyTheDoggy#9276";
+const DiscordLink = "https://discord.gg/Xfqqwtm";
 
 Client.on('ready', () => {
 	console.log(`Bot logged on with ${Client.user.tag}`);
