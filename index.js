@@ -8,15 +8,17 @@ Client.on('ready', () => {
 
 Client.on('message', (message) => {
 
-	msg = message.content;
-	msgp = msg.substring(1);
-	channel = message.channel;
-	author = message.author;
+	let msg = message.content;
+	let msgp = msg.substring(1);
+	let channel = message.channel;
+	let author = message.author;
 
-	if(msg == prefix + "test") {
-		channel.send("Yay It works... I think?");
+	if(msgp === "test") {
+		channel.send("Yay It works... I think?")
+	} else if(msgp === "discord" & proccess.env.Discord) {
+		channel.send("https://discord.gg/Xfqqwtm");
 	}
 
 });
 
-Client.login(process.env.BOT_TOKEN);
+Client.login(proccess.env.BOT_TOKEN);
